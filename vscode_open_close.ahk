@@ -17,6 +17,9 @@ else {
 		workingDir := Trim(workingDir)
 		
 		if (FileExist(workingDir)) {
+            if (Not WinExists("MINGW64")) {
+                Run, "C:\Program Files\Git\git-bash.exe" --cd="%workingDir%"
+            }
 			Run, cmd /c code %workingDir%
 		}
 		else {
