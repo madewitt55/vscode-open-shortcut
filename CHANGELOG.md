@@ -16,3 +16,8 @@ inputted
 
 ### Added
 - Now launches Git Bash in the specified directory along with VSCode
+
+## [2.1.0] - 02-27-25
+
+### Fixed
+- Typo on WinExist function that prevents code from running

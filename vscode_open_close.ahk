@@ -11,13 +11,13 @@ if (WinExist("Visual Studio Code")) {
 	}
 }
 else {
-	dirFile := "C:\Users\madew\Documents\AutoHotKey\vscode-open-shortcut\directory.txt"
+	dirFile := "C:\projects\vscode-open-shortcut\directory.txt"
 	if (FileExist(dirFile)) {
 		FileRead, workingDir, %dirFile%
 		workingDir := Trim(workingDir)
 		
 		if (FileExist(workingDir)) {
-            if (Not WinExists("MINGW64")) {
+            if (Not WinExist("MINGW64")) {
                 Run, "C:\Program Files\Git\git-bash.exe" --cd="%workingDir%"
             }
 			Run, cmd /c code %workingDir%
